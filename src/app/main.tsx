@@ -5,7 +5,8 @@ import App from "./App.tsx";
 import store from "../shared/store/index.ts";
 import { Provider } from "react-redux";
 import { createTheme, MantineProvider } from "@mantine/core";
-import { BrowserRouter } from "react-router";
+// import { BrowserRouter } from "react-router";
+import { HashRouter } from "react-router";
 
 const theme = createTheme({
   colors: {
@@ -39,12 +40,12 @@ const theme = createTheme({
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Provider store={store}>
         <MantineProvider theme={theme}>
           <App />
         </MantineProvider>
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>
 );
