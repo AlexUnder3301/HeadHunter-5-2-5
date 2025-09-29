@@ -87,7 +87,13 @@ const VacancyCard = ({
             >
               Смотреть вакансию
             </Button>
-            <Button className={styles["response-button"]}>Откликнуться</Button>)
+            <Button
+              className={styles["response-button"]}
+              onClick={handleHHRedirect}
+            >
+              Откликнуться
+            </Button>
+            )
           </>
         )}
       </div>
